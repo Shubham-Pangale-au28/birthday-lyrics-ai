@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, Link, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -6,10 +6,10 @@ import Details1 from "./pages/DetailsOne";
 import Details2 from "./pages/DetailsTwo";
 import Lyrics from "./pages/Lyrics";
 import { useAuth } from "./context/AuthContext";
-import { PrivateRoute, VerifiedOrLoginRoute } from "./components/Protected";
+import { PrivateRoute } from "./components/Protected";
 
 export default function App() {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn } = useAuth();
   const location = useLocation();
 
   return (
